@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=10, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script>
+        function check(){  
+            const users = JSON.parse(localStorage.getItem('users'))
+            var userName = document.getElementById('userName');
+            var passwordS = document.getElementById('passwordS');
+            var userRemember = document.getElementById("rememberMe");
+
+            if(users.some(user => user.username === userName.value && user.password === passwordS.value)){
+                alert('Logado!');
+            }else{
+                alert('Erro no login!');
+            }
+            
+        }
+    </script>
+    <style>
+        body {
+            background-color: #D3D3D3;
+        }
+
+        .form {
+            width: 30%;
+            height: 85%;
+            background: linear-gradient(#4682B4, #483D8B);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+
+        input {
+            margin: 3px 0px 20px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 70px;
+            margin-top: 10px;
+            background-color: #2F4F4F;
+            color: white;
+            font-family: Arial;
+        }
+
+        button:hover {            
+            border: 2px solid #D3D3D3;
+        }
+
+        input:hover {
+            opacity: 0.8;
+        }
+        
+        .block {
+            text-align: center;
+        }
+
+
+        .Logo {
+            text-align: center;
+            margin-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        .newUser {
+            display: block;
+            float: right;
+            margin-right: 20px;
+            margin-top: 45px;
+        }        
+        .newUser:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="Logo">
+            <img src="img/loga.png" alt="Logo tela de login" width="120" height="120">
+        </div>
+        <form class="block" id="FormSenha">
+            <input type="text" id="userName" size="30" placeholder="Usuário" />
+            <br />
+            <input type="password" id="passwordS" size="30" placeholder="Senha" />
+            <br />
+            <br />
+            <button type="submit" value="Enviar" onclick="check()">Entrar</button>
+        </form>
+        <div class="newUser">
+            <a href="cadastro.html"><img src="img/newUser.png" alt="Icone link para tela de cadastro" width="30" height="30"></a>
+        </div>
+    </div>
+</body>
+</html>
