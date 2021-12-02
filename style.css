@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Righteous", cursive;
+}
+
+body {
+  background-color: #778899;
+}
+
+header {
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.card {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.9s;
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+  backface-visibility: hidden;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.cardFront {
+  background-color: #101c2c;
+  transform: rotateY(180deg);
+}
+
+.cardBack {
+  background-color: #05c3ff;
+  font-size: 30px;
+  color: #101c2c;
+}
+
+#gameOver {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  display: none;
+}
+
+#gameOver h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+}
+
+#restart {
+  padding: 20px;
+  border: none;
+  font-size: 20px;
+  background-color: yellow;
+  border-radius: 10px;
+  transform: 1.2s;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#gameBoardThree {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr   ;
+  gap: 3px;
+  margin-right: auto;
+  cursor: pointer;
+  margin-left: 70px;
+}
+
+#gameBoardOne{
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  gap: 3px;
+  margin-right: auto;
+  cursor: pointer;
+  margin-left: 165px;
+}
+ 
+#gameBoardTwo{
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+  gap: 3px;
+  margin-right: auto;
+  cursor: pointer;
+  margin-left: 165px;
+}
+
+#reset {
+  cursor: pointer;
+  background: transparent;
+  border: none !important;
+  font-size: 0;
+}
+
+.box {
+  display: flex;
+}
+
+h4 {
+  padding-right: 10px;
+}
+
+#play {
+  background-color: #1e90ff;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.timeGame {
+  font-size: 20px;
+  margin-left: 80px;
+  width: 14%;
+}
+
+b {
+  color: red;
+}
+
+.block {
+  display: flex;
+}
+
+.boxNivel{
+  width: 60%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+h1{
+  text-align: center;
+}
+
+button{
+  padding: 10px 10px;
+}
+
+.nivelS{
+  text-align: center;
+  padding-top: 50px;
+}
+
+.sair{
+  float: right;
+  margin-top: 30px;
+  margin-right: 30px;
+}

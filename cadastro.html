@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,14 +55,86 @@
             background-color: #D3D3D3;
         }
 
-        .form {
-            width: 40%;
-            height: 90%;
-            background-color: #708090;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateY(-50%) translateX(-50%);
+        @media (min-width: 320px) and (max-width: 499px) {
+            .form {
+                width: 90%;
+                height: 95%;
+                background-color: #708090;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+
+            .block {
+                margin-left: 10px;
+                padding-top: 15px;
+            }
+
+            input {
+                margin: 3px 0px;
+                padding: 10px;
+                display: block;
+                border-radius: 15px;
+                width: 210px;
+            }
+
+            button {
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: #696969;
+                color: white;
+                margin-left: 15px;
+            }
+
+            img {
+                display: block;
+                float: right;
+                margin-right: 12px;
+                margin-top: 8px;
+            }
+        }
+
+        @media(min-width: 500px) {
+            .form {
+                width: 40%;
+                height: 90%;
+                background-color: #708090;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+            }
+
+            .block {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            input {
+                margin: 3px 0px;
+                padding: 10px;
+                display: block;
+                border-radius: 15px;
+                width: 210px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            button {
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: #696969;
+                color: white;
+                margin-left: 15px;
+            }
+
+            img {
+                display: block;
+                float: right;
+                margin-right: 12px;
+                margin-top: 8px;
+            }
         }
 
         h1 {
@@ -77,24 +150,8 @@
             font-family: Arial;
         }
 
-        input {
-            margin: 3px 0px;
-            padding: 10px;
-            display: block;
-            border-radius: 15px;
-        }
-
-        button {
-            padding: 10px 20px;
-            margin-left: 60px;
-            border-radius: 10px;
-            background-color: #696969;
-            color: white;
-        }
-
         button:hover {
             border: 2px solid #D3D3D3;
-
         }
 
         input:hover {
@@ -114,20 +171,8 @@
             display: flex;
         }
 
-        .block {
-            margin-left: 60px;
-            padding-top: 15px;
-        }
-
-        img {
-            display: block;
-            float: right;
-            margin-right: 20px;
-        }
-
         img:hover {
             opacity: 0.5;
-
         }
     </style>
 </head>
@@ -151,11 +196,13 @@
             <label>Repita a senha:</label>
             <input type="password" id="verifyPassword" placeholder="Repita a senha" />
             <br />
-            <br />
             <button type="submit" value="Enviar" onclick="register()">Registra</button>
             <button type="button" value="Limpar" onclick="limpaCampos()">Limpar</button>
+            <a href="login.html"><img src="image/loginI.png" alt="Link para a tela de login" width="30" height="30"></a>
         </form>
-        <a href="login.html"><img src="img/loginI.png" alt="Link para a tela de login" width="30" height="30"></a>
+        <div>
+        </div>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da Memória</title>
+</head>
+<body onload="inicio(2)">
+    <header>
+        <h1>Jogo de Memória</h1>
+    </header>
+    <div class="block">
+        <aside class="timeGame">
+            <div class="box">
+                <h4>Recomeçar</h4>
+                <button id="reset" onclick="restart()"><img src="./image/reinicia.svg" width="20"></button>
+            </div>
+            <p>Tempo: <b id="tempo">60 segundos</b></p>
+            <button id="play" type="submit" onclick="timePlay()">Começar</button>
+            <br />
+            <br />
+            <h2>Nivel Médio</h2>
+            <button onclick="voltar()">Voltar para o menu</button>
+        </aside>
+        
+        <div id="gameBoardTwo">
+        </div>
+        <div id="gameOver">
+            <h1>Parabéns, você completou o jogo!</h1>
+            <button id="restart" onclick="restart()">Jogar novamente</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
